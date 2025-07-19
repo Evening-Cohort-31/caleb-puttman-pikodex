@@ -7,20 +7,33 @@
 
 #container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
     margin-top: 2rem;
     margin-bottom: 3rem;
+    gap: 1rem;
+    
 }
 
 .piko-card {
-    flex-basis: 25%;
-    margin: 3em;
+    flex: 1 1 30%;
+    min-width: 250px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: rgb(110, 21, 88);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.piko-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .piko-img {
-    width: 100%;
-    border-radius: 1em;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .piko-info {
