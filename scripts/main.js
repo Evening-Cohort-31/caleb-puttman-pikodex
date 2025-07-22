@@ -9,6 +9,17 @@ const bigBox = document.querySelector("#parent")
 
 let html = ""
 
+window.addEventListener("beforeunload", () => {
+    sessionStorage.setItem("scrollY", window.scrollY)
+})
+
+window.addEventListener("load", () => {
+    const savedScroll = sessionStorage.getItem("scrollY");
+    if (savedScroll !== null) {
+        window.scrollTo(0, parseInt(savedScroll))
+    }
+})
+
 if (!id) {
     html += `<div id="container">`
     for ( let pikomon of database) {
@@ -22,9 +33,9 @@ if (!id) {
     html += `</div>`
     html += `<div id="container" class="unfocused">`
     for (let pikomon of database) {
-        if (id !== pikomon.id) {
+        //if (id !== pikomon.id) {
             html += pikomonCard(pikomon)
-        }
+        //}
     }
     html += "</div>"
     
