@@ -12,8 +12,10 @@
     margin-top: 2rem;
     margin-bottom: 3rem;
     gap: 1rem;
-    
-}
+    order: 2;
+    position: relative;
+    z-index: 10;
+    }
 
 .piko-card {
     flex: 1 1 30%;
@@ -61,4 +63,41 @@
 
 .piko-weakness {
 
+}
+
+#focused {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 11;
+}
+
+#focused .piko-card {
+    z-index: 12;
+    position: relative
+}
+
+#parent {
+    display: flex;
+    position: relative;
+}
+
+.unfocused {
+    opacity: 0.5;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 11;
 }

@@ -1,7 +1,7 @@
-export const pikomonCard = (pikomon) => {
-    let html = `
-    <div class="piko-card">
-        <a href="?id=${pikomon.id}" style="text-decoration: none; color: inherit;">
+export const focusedCard = (pikomon) => {
+        let html = `
+    <a href="/" class="backdrop"></a>
+    <div class="piko-card focused">
             <div>
                 <img class="piko-img" src=${pikomon.imageUrl} alt="An image of the pikomon: ${pikomon.name}">
             </div>
@@ -22,7 +22,3 @@ export const pikomonCard = (pikomon) => {
 
     return html
 }
-
-
-
-
