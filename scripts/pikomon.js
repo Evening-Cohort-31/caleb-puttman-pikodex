@@ -9,12 +9,7 @@ export const pikomonCard = (pikomon) => {
                 <section class="piko-name">
                     <h3>${pikomon.name}</h3>
                 </section>
-                <article class="info-text">
-                    <p>Pikodex Entry #${pikomon.id}</p>
-                    <p class="piko-category">Category: ${pikomon.category}</p>
-                    <p class="piko-abilities">Abilities: ${pikomon.abilities}<p>
-                    <p class="piko-weakness">Weakness: ${pikomon.weakness}</p>
-                </article>
+
                 
             </div>
         </a>
@@ -26,3 +21,9 @@ export const pikomonCard = (pikomon) => {
 
 
 
+                // <article class="info-text">
+                //     <p>Pikodex Entry #${pikomon.id}</p>
+                //     <p class="piko-category">Category: ${pikomon.category}</p>
+                //     <p class="piko-abilities">Abilities: ${pikomon.abilities}<p>
+                //     <p class="piko-weakness">Weakness: ${pikomon.weakness}</p>
+                // </article>
