@@ -1,3 +1,4 @@
+// Creates a focused html card
 export const focusedCard = (pikomon) => {
         let html = `
     <a href="/" class="backdrop"></a>
